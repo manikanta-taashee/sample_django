@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  post_build:
+    commands:
+      - echo Packaging the application...
+      - zip -r my-app.zip . -x '*.git*'
+
+artifacts:
+  files:
+    - my-app.zip
